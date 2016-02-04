@@ -19,7 +19,7 @@ void Obj_Player::update(EventHandler e, GameTime t)
 	if (e.getKeyHeld(SDLK_w))
 		y -= 50 * t.getDeltaTime();
 	if (e.getKeyHeld(SDLK_s))
-		y += 50 * t.getDeltaTime();
+		y += 10 * t.getDeltaTime();
 
 	if (e.getKeyPressed(SDLK_r))
 		sprite->nextFrame();

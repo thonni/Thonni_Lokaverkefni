@@ -129,6 +129,7 @@
     <ClInclude Include="EventHandler.h" />
     <ClInclude Include="Objects.h" />
     <ClInclude Include="Sprite.h" />
+    <ClInclude Include="Test.h" />
     <ClInclude Include="TextureLoader.h" />
     <ClInclude Include="GameTime.h" />
   </ItemGroup>
