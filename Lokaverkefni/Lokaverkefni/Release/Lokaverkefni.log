@@ -1,0 +1,10 @@
+﻿  Main.cpp
+c:\users\thonn\desktop\thonni_lokaverkefni\lokaverkefni\lokaverkefni\TextureLoader.h(21): warning C4474: 'printf' : too many arguments passed for format string
+  c:\users\thonn\desktop\thonni_lokaverkefni\lokaverkefni\lokaverkefni\TextureLoader.h(21): note: placeholders and their parameters expect 1 variadic arguments, but 2 were provided
+  Generating code
+  2 of 171 functions ( 1.2%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    2 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  Lokaverkefni.vcxproj -> C:\Users\thonn\Desktop\Thonni_Lokaverkefni\Lokaverkefni\Release\Lokaverkefni.exe
+  Lokaverkefni.vcxproj -> C:\Users\thonn\Desktop\Thonni_Lokaverkefni\Lokaverkefni\Release\Lokaverkefni.pdb (Full PDB)

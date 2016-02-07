@@ -72,6 +72,10 @@
     <IncludePath>C:\Users\thonn\Desktop\Lokaverkefni\Lokaverkefni\Lokaverkefni\SDL\include;$(IncludePath)</IncludePath>
     <LibraryPath>C:\Users\thonn\Desktop\Lokaverkefni\Lokaverkefni\Lokaverkefni\SDL\lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>C:\Users\thonn\Desktop\Thonni_Lokaverkefni\Lokaverkefni\Lokaverkefni\SDL\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\thonn\Desktop\Thonni_Lokaverkefni\Lokaverkefni\Lokaverkefni\SDL\lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -101,6 +105,8 @@
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">

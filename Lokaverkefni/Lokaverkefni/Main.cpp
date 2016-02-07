@@ -7,6 +7,7 @@
 #include "EventHandler.h"
 #include "Objects.h"
 #include "GameTime.h"
+#include "windows.h"
 
 //Create window width and height
 const int SCREEN_WIDTH = 1024;
@@ -27,6 +28,7 @@ int main(int argc, char* args[])
 	if (!Initialize())
 	{
 		printf("Could not initialize!\n");
+		Sleep(1000);
 		return -1;
 	}
 	
@@ -72,6 +74,7 @@ bool Initialize()
 	if (SDL_Init(SDL_INIT_VIDEO) < 0)
 	{
 		printf("SDL could not be initialized! SDL_Error: %s\n", SDL_GetError());
+		Sleep(1000);
 		return false;
 	}
 
@@ -84,6 +87,7 @@ bool Initialize()
 	if (window == NULL)
 	{
 		printf("Window could not be created! SDL_Error: %s\n", SDL_GetError());
+		Sleep(1000);
 		return false;
 	}
 
