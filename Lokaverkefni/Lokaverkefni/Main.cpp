@@ -37,7 +37,9 @@ int main(int argc, char* args[])
 	EventHandler e;
 	GameTime t;
 
-	Obj_Player player = Obj_Player(renderer, 20, 20);
+	std::vector<Obj_MainParent*> objects;
+	objects.push_back(new Obj_Player(renderer, 50, 50));
+	objects.push_back(new Obj_Wall(renderer, 200, 200));
 
 	//Main game loop
 	while (run)
@@ -52,13 +54,19 @@ int main(int argc, char* args[])
 			
 		
 		//UPDATES
-		player.mainUpdate(e, t);
+		for (int i = 0; i < objects.size(); i++)
+		{
+			objects[i]->update(e, t);
+		}
 
 		//RENDERING
 		//Clear the renderer (Screen)
 		SDL_RenderClear(renderer);
 
-		player.render();
+		for (int i = 0; i < objects.size(); i++)
+		{
+			objects[i]->render();
+		}
 
 		//Update the renderer (Screen)
 		SDL_RenderPresent(renderer);

@@ -3,11 +3,13 @@
 using namespace std;
 
 Sprite::Sprite(SDL_Renderer* rendererIn, std::string file, 
-	int frameWidth, int frameHeight, int framesIn)
+	int frameWidth, int frameHeight, int framesIn, float speedIn)
 {
 	frames = framesIn;
 	frame = 0;
 	renderer = rendererIn;
+	speed = speedIn;
+	speedCounter = 0.0f;
 
 	baseTexture = NULL;
 
@@ -52,12 +54,29 @@ void Sprite::render(int x, int y)
 	SDL_RenderCopy(renderer, baseTexture, &rects[frame], &tempRect);
 }
 
-void Sprite::update()
+void Sprite::update(GameTime t)
+{
+	if (speedCounter >= (1.0f / speed))
+	{
+		frame += 1;
+		if (frame >= frames)
+			frame = 0;
+		speedCounter = 0.0f;
+	}
+	else
+	{
+		speedCounter += t.getDeltaTime();
+	}
+}
+
+void Sprite::nextFrame()
 {
 	frame += 1;
 	if (frame >= frames)
 		frame = 0;
 }
+
+//Getters and Setters
 
 int Sprite::setFrame(int frameIn)
 {
@@ -72,9 +91,12 @@ int Sprite::setFrame(int frameIn)
 	}
 }
 
-void Sprite::nextFrame()
+void Sprite::setSpeed(float newSpeed)
 {
-	frame += 1;
-	if (frame >= frames)
-		frame = 0;
+	speed = newSpeed;
+}
+
+float Sprite::getSpeed()
+{
+	return speed;
 }

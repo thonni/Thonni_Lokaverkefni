@@ -34,3 +34,10 @@ public:
 	Obj_Player(SDL_Renderer*, int, int);
 	void update(EventHandler, GameTime);
 };
+
+class Obj_Wall : public Obj_MainParent
+{
+public:
+	Obj_Wall(SDL_Renderer*, int, int);
+	void update(EventHandler, GameTime);
+};

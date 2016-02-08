@@ -9,7 +9,7 @@ Obj_MainParent::Obj_MainParent(SDL_Renderer* rendererIn, int startX, int startY)
 	imageRectangle.x = startX;
 	imageRectangle.y = startY;
 	
-	sprite = new Sprite(renderer, "resources/mario.png", 16, 28, 4);
+	sprite = new Sprite(renderer, "resources/default.png", 64, 64, 1, 0.0f);
 }
 
 //A function that takes in a string path and sets the texture to that image
@@ -24,7 +24,7 @@ void Obj_MainParent::mainUpdate(EventHandler e, GameTime t)
 	imageRectangle.x = x;
 	imageRectangle.y = y;
 
-	sprite->update();
+	sprite->update(t);
 	update(e, t);
 }
 

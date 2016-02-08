@@ -127,6 +127,8 @@
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Obj_MainParent.cpp" />
     <ClCompile Include="Obj_Player.cpp" />
+    <ClCompile Include="Obj_Wall.cpp" />
+    <ClCompile Include="Room_MainParent.cpp" />
     <ClCompile Include="Sprite.cpp" />
     <ClCompile Include="GameTime.cpp" />
   </ItemGroup>
@@ -134,6 +136,7 @@
     <ClInclude Include="Camera.h" />
     <ClInclude Include="EventHandler.h" />
     <ClInclude Include="Objects.h" />
+    <ClInclude Include="Rooms.h" />
     <ClInclude Include="Sprite.h" />
     <ClInclude Include="TextureLoader.h" />
     <ClInclude Include="GameTime.h" />
