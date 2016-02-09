@@ -12,32 +12,50 @@ class Obj_MainParent
 {
 protected:
 	SDL_Texture* texture;
+
 	SDL_Rect imageRectangle;
+
 	SDL_Renderer* renderer;
+
 	TextureLoader textureLoader;
+
 	SDL_Point position;
+
 	float x;
+
 	float y;
+
 	Sprite* sprite;
 
+
 public:
+
 	Obj_MainParent(SDL_Renderer*, int, int);
+
 	void mainUpdate(EventHandler, GameTime);
+
 	virtual void update(EventHandler, GameTime);
-	void render();
+
+	void render(int, int);
+
 	void setTexture(std::string);
+
 };
 
 class Obj_Player: public Obj_MainParent
 {
 public:
 	Obj_Player(SDL_Renderer*, int, int);
+
 	void update(EventHandler, GameTime);
+
 };
 
 class Obj_Wall : public Obj_MainParent
 {
 public:
 	Obj_Wall(SDL_Renderer*, int, int);
+
 	void update(EventHandler, GameTime);
+
 };

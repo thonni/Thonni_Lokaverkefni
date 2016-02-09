@@ -16,6 +16,9 @@
     <Filter Include="Source Files\Objects">
       <UniqueIdentifier>{76cf3038-2358-44e6-89d2-002b569bf77c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Rooms">
+      <UniqueIdentifier>{06e3ef85-638c-4dfb-9cb9-e757c9a0e53b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -36,11 +39,14 @@
     <ClCompile Include="GameTime.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Room_MainParent.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Obj_Wall.cpp">
       <Filter>Source Files\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Room_MainParent.cpp">
+      <Filter>Source Files\Rooms</Filter>
+    </ClCompile>
+    <ClCompile Include="Room_TestRoom.cpp">
+      <Filter>Source Files\Rooms</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

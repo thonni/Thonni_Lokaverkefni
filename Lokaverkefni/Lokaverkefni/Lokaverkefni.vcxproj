@@ -129,6 +129,7 @@
     <ClCompile Include="Obj_Player.cpp" />
     <ClCompile Include="Obj_Wall.cpp" />
     <ClCompile Include="Room_MainParent.cpp" />
+    <ClCompile Include="Room_TestRoom.cpp" />
     <ClCompile Include="Sprite.cpp" />
     <ClCompile Include="GameTime.cpp" />
   </ItemGroup>

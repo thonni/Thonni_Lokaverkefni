@@ -1,13 +1,2 @@
-﻿  Obj_Wall.cpp
-c:\users\thonn\desktop\thonni_lokaverkefni\lokaverkefni\lokaverkefni\textureloader.h(21): warning C4474: 'printf' : too many arguments passed for format string
-  c:\users\thonn\desktop\thonni_lokaverkefni\lokaverkefni\lokaverkefni\textureloader.h(21): note: placeholders and their parameters expect 1 variadic arguments, but 2 were provided
-  Obj_Player.cpp
-c:\users\thonn\desktop\thonni_lokaverkefni\lokaverkefni\lokaverkefni\textureloader.h(21): warning C4474: 'printf' : too many arguments passed for format string
-  c:\users\thonn\desktop\thonni_lokaverkefni\lokaverkefni\lokaverkefni\textureloader.h(21): note: placeholders and their parameters expect 1 variadic arguments, but 2 were provided
-c:\users\thonn\desktop\thonni_lokaverkefni\lokaverkefni\lokaverkefni\obj_player.cpp(13): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
-c:\users\thonn\desktop\thonni_lokaverkefni\lokaverkefni\lokaverkefni\obj_player.cpp(15): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
-c:\users\thonn\desktop\thonni_lokaverkefni\lokaverkefni\lokaverkefni\obj_player.cpp(17): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
-c:\users\thonn\desktop\thonni_lokaverkefni\lokaverkefni\lokaverkefni\obj_player.cpp(19): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
-  Generating Code...
-  Lokaverkefni.vcxproj -> C:\Users\thonn\Desktop\Thonni_Lokaverkefni\Lokaverkefni\Debug\Lokaverkefni.exe
+﻿  Lokaverkefni.vcxproj -> C:\Users\thonn\Desktop\Thonni_Lokaverkefni\Lokaverkefni\Debug\Lokaverkefni.exe
   Lokaverkefni.vcxproj -> C:\Users\thonn\Desktop\Thonni_Lokaverkefni\Lokaverkefni\Debug\Lokaverkefni.pdb (Partial PDB)

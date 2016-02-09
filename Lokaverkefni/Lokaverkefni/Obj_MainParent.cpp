@@ -31,7 +31,7 @@ void Obj_MainParent::mainUpdate(EventHandler e, GameTime t)
 void Obj_MainParent::update(EventHandler e, GameTime t) {};
 
 //A function that renders the object
-void Obj_MainParent::render()
+void Obj_MainParent::render(int deltaX, int deltaY)
 {
-	sprite->render(x, y);
+	sprite->render((x+deltaX), (y+deltaY));
 }

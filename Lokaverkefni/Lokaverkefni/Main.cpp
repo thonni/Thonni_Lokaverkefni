@@ -8,10 +8,11 @@
 #include "Objects.h"
 #include "GameTime.h"
 #include "windows.h"
+#include "Rooms.h"
 
 //Create window width and height
 const int SCREEN_WIDTH = 1024;
-const int SCREEN_HEIGHT = 768;
+const int SCREEN_HEIGHT = 600;
 
 //Create functions
 bool Initialize();
@@ -28,7 +29,6 @@ int main(int argc, char* args[])
 	if (!Initialize())
 	{
 		printf("Could not initialize!\n");
-		Sleep(1000);
 		return -1;
 	}
 	
@@ -37,9 +37,11 @@ int main(int argc, char* args[])
 	EventHandler e;
 	GameTime t;
 
-	std::vector<Obj_MainParent*> objects;
-	objects.push_back(new Obj_Player(renderer, 50, 50));
-	objects.push_back(new Obj_Wall(renderer, 200, 200));
+	//Create a Vector (List) of all Rooms (Levels)
+	std::vector<Room_MainParent*> rooms
+	{
+		new Room_TestRoom(renderer, 2000, 2000, 0, 0)
+	};
 
 	//Main game loop
 	while (run)
@@ -49,24 +51,20 @@ int main(int argc, char* args[])
 		t.update();
 
 		//Exit event or escape key
-		if (e.getKeyHeld(SDLK_ESCAPE) || e.getEvent(SDL_QUIT))
+		if (e.getEvent(SDL_QUIT))
 			run = false;
 			
 		
-		//UPDATES
-		for (int i = 0; i < objects.size(); i++)
-		{
-			objects[i]->update(e, t);
-		}
+		//Update the current room
+		rooms[0]->mainUpdate(e, t);
+		rooms[0]->update(e, t);
 
 		//RENDERING
-		//Clear the renderer (Screen)
+		//Clear the Window
 		SDL_RenderClear(renderer);
 
-		for (int i = 0; i < objects.size(); i++)
-		{
-			objects[i]->render();
-		}
+		//Render all items in the current room
+		rooms[0]->mainRender();
 
 		//Update the renderer (Screen)
 		SDL_RenderPresent(renderer);
@@ -75,11 +73,13 @@ int main(int argc, char* args[])
 	return 0;
 }
 
-//A function that runs when the game starts
+
+
+//A function that runs when the game starts to initialize things
 bool Initialize()
 {
 	//Initiate SDL Video and checks if there is an error
-	if (SDL_Init(SDL_INIT_VIDEO) < 0)
+	if (SDL_Init(SDL_INIT_EVERYTHING) < 0)
 	{
 		printf("SDL could not be initialized! SDL_Error: %s\n", SDL_GetError());
 		Sleep(1000);
@@ -117,6 +117,8 @@ bool Initialize()
 
 	return true;
 }
+
+
 
 //A function that handles closing the program
 void Close()
