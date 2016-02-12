@@ -69,8 +69,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>C:\Users\thonn\Desktop\Lokaverkefni\Lokaverkefni\Lokaverkefni\SDL\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\thonn\Desktop\Lokaverkefni\Lokaverkefni\Lokaverkefni\SDL\lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\thonn\Desktop\Thonni_Lokaverkefni\Lokaverkefni\Lokaverkefni\SDL\include;C:\Users\thonn\Desktop\Lokaverkefni\Lokaverkefni\Lokaverkefni\SDL\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\thonn\Desktop\Thonni_Lokaverkefni\Lokaverkefni\Lokaverkefni\SDL\lib\x86;C:\Users\thonn\Desktop\Lokaverkefni\Lokaverkefni\Lokaverkefni\SDL\lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <IncludePath>C:\Users\thonn\Desktop\Thonni_Lokaverkefni\Lokaverkefni\Lokaverkefni\SDL\include;$(IncludePath)</IncludePath>
@@ -134,7 +134,6 @@
     <ClCompile Include="GameTime.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Camera.h" />
     <ClInclude Include="EventHandler.h" />
     <ClInclude Include="Objects.h" />
     <ClInclude Include="Rooms.h" />

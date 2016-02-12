@@ -4,7 +4,7 @@
 
 GameTime::GameTime()
 {
-	deltaTime = 0.0f;
+	deltaTime = 1.0f / 2.0f;
 	currentTime = 0;
 	lastTime = 0;
 }
