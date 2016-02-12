@@ -1,3 +1,19 @@
-﻿  GameTime.cpp
+﻿  Room_TestRoom.cpp
+c:\users\thonn\desktop\thonni_lokaverkefni\lokaverkefni\lokaverkefni\room_testroom.cpp(16): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+  Room_MainParent.cpp
+c:\users\thonn\desktop\thonni_lokaverkefni\lokaverkefni\lokaverkefni\room_mainparent.cpp(17): warning C4018: '<': signed/unsigned mismatch
+c:\users\thonn\desktop\thonni_lokaverkefni\lokaverkefni\lokaverkefni\room_mainparent.cpp(31): warning C4018: '<': signed/unsigned mismatch
+  Obj_Wall.cpp
+  Obj_Player.cpp
+c:\users\thonn\desktop\thonni_lokaverkefni\lokaverkefni\lokaverkefni\obj_player.cpp(13): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+c:\users\thonn\desktop\thonni_lokaverkefni\lokaverkefni\lokaverkefni\obj_player.cpp(15): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+c:\users\thonn\desktop\thonni_lokaverkefni\lokaverkefni\lokaverkefni\obj_player.cpp(17): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+c:\users\thonn\desktop\thonni_lokaverkefni\lokaverkefni\lokaverkefni\obj_player.cpp(19): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+  Obj_MainParent.cpp
+c:\users\thonn\desktop\thonni_lokaverkefni\lokaverkefni\lokaverkefni\obj_mainparent.cpp(7): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\thonn\desktop\thonni_lokaverkefni\lokaverkefni\lokaverkefni\obj_mainparent.cpp(8): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\thonn\desktop\thonni_lokaverkefni\lokaverkefni\lokaverkefni\obj_mainparent.cpp(23): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  Main.cpp
+  Generating Code...
   Lokaverkefni.vcxproj -> C:\Users\thonn\Desktop\Thonni_Lokaverkefni\Lokaverkefni\Debug\Lokaverkefni.exe
   Lokaverkefni.vcxproj -> C:\Users\thonn\Desktop\Thonni_Lokaverkefni\Lokaverkefni\Debug\Lokaverkefni.pdb (Partial PDB)

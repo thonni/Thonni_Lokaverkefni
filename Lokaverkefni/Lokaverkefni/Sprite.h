@@ -33,7 +33,7 @@ protected:
 
 	vector<SDL_Rect> rects;     //A vector list that maps out each frame on the texture
 
-	SDL_Rect tempRect;
+	SDL_Rect tempRect;          //Used in the render function to temporariliy hold one rects item
 
 public:
 	Sprite(SDL_Renderer* renderer, std::string file, 
@@ -49,6 +49,7 @@ public:
 	int setFrame(int);         //Set frame
 
 	void setSpeed(float);      //Set speed
+
 	float getSpeed();          //Get speed
 
 };

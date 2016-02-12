@@ -2,60 +2,60 @@
 
 #include "SDL.h"
 #include "SDL_image.h"
-#include "TextureLoader.h"
 #include "string"
 #include "EventHandler.h"
 #include "Sprite.h"
 #include "GameTime.h"
 
+
+/*------------------------------------
+//This class is the main parent for other objects to use
+*/
 class Obj_MainParent
 {
 protected:
-	SDL_Texture* texture;
 
-	SDL_Rect imageRectangle;
+	SDL_Renderer* renderer;         //Holds the renderer pointer
 
-	SDL_Renderer* renderer;
+	float x;                        //X Position
 
-	TextureLoader textureLoader;
+	float y;                        //Y Position
 
-	SDL_Point position;
-
-	float x;
-
-	float y;
-
-	Sprite* sprite;
+	Sprite* sprite;                 //Holds the sprite
 
 
 public:
 
-	Obj_MainParent(SDL_Renderer*, int, int);
+	Obj_MainParent(SDL_Renderer*, int, int);       //Constructor
 
-	void mainUpdate(EventHandler, GameTime);
+	void mainUpdate(EventHandler, GameTime);       //The main update, does important things
 
-	virtual void update(EventHandler, GameTime);
+	virtual void update(EventHandler, GameTime);   //The update that children of the class can change
 
-	void render(int, int);
-
-	void setTexture(std::string);
+	void render(int, int);                         //Renders the object sprite
 
 };
 
+/*------------------------------------
+//The player object
+*/
 class Obj_Player: public Obj_MainParent
 {
 public:
-	Obj_Player(SDL_Renderer*, int, int);
+	Obj_Player(SDL_Renderer*, int, int);           //Constructor
 
-	void update(EventHandler, GameTime);
+	void update(EventHandler, GameTime);           //The update function, runs each frame
 
 };
 
+/*------------------------------------
+//A wall
+*/
 class Obj_Wall : public Obj_MainParent
 {
 public:
-	Obj_Wall(SDL_Renderer*, int, int);
+	Obj_Wall(SDL_Renderer*, int, int);             //Constructor
 
-	void update(EventHandler, GameTime);
+	void update(EventHandler, GameTime);           //The update function, runs each frame
 
 };

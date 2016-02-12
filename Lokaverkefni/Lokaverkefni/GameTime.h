@@ -5,16 +5,19 @@
 class GameTime
 {
 private:
-	float deltaTime;
-	long currentTime;
-	long lastTime;
+	float deltaTime;         //Holds the time that passes between frames
+
+	long currentTime;        //Holds the current time
+
+	long lastTime;           //Holds the time last frame (Both used to get delta time)
 
 public:
-	GameTime();
-	void update();
+	GameTime();				 //Initializer
+
+	void update();			 //Runs each frame to update the time
 
 	//Getters and Setters
-	double getDeltaTime();
+	double getDeltaTime();   //Returns Delta Time
 
 };
 
