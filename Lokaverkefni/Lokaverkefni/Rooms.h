@@ -46,5 +46,5 @@ private:
 public:
 	Room_TestRoom(SDL_Renderer*, int, int, int, int);
 
-	void update(EventHandler, GameTime);
+	void update(EventHandler e, GameTime t);
 };

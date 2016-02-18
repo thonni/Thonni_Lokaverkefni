@@ -4,7 +4,7 @@
 Obj_Player::Obj_Player(SDL_Renderer* renderer, int startX, int startY)
 	:Obj_MainParent(renderer, startX, startY)
 {
-	sprite = new Sprite(renderer, "resources/mario.png", 16, 28, 4, 0.1f);
+	setSprite("resources/mario.png", 16, 28, 4, 2.0f);
 }
 
 void Obj_Player::update(EventHandler e, GameTime t)
@@ -19,5 +19,10 @@ void Obj_Player::update(EventHandler e, GameTime t)
 		y += 50 * t.getDeltaTime();
 
 	if (e.getKeyPressed(SDLK_r))
-		sprite->setSpeed(sprite->getSpeed() + 0.1f);
+	{
+		if (active)
+			active = false;
+		else
+			active = true;
+	}
 }

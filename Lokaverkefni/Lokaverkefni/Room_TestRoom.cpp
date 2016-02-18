@@ -14,4 +14,6 @@ void Room_TestRoom::update(EventHandler e, GameTime t)
 {
 	if (e.getKeyHeld(SDLK_RIGHT))
 		camX += t.getDeltaTime() * 10;
+
+	cout << camX << endl;
 }

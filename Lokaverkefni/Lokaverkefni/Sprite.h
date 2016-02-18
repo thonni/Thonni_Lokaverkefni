@@ -21,6 +21,10 @@ protected:
 
 	int baseTextureHeight;      //The height of the whole texture
 
+	int frameWidth;             //The width of each frame
+
+	int frameHeight;            //The height of each frame
+
 	int counter;                //A counter that helps with mapping the frames on the texture
 
 	float speed;                //The speed of the texture changing frames
@@ -51,6 +55,10 @@ public:
 	void setSpeed(float);      //Set speed
 
 	float getSpeed();          //Get speed
+
+	int getWidth();            //Get frame width
+
+	int getHeight();           //Get frame height
 
 };
 

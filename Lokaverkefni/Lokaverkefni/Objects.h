@@ -21,18 +21,34 @@ protected:
 
 	float y;                        //Y Position
 
+	int width;                      //Width of object
+
+	int height;                     //Height of object
+
 	Sprite* sprite;                 //Holds the sprite
+
+	bool solid;                     //If the object is solid
+
+	bool visible;                   //If the object is visible
+
+	bool active;                    //If the object is active (if not it is not updateted or rendered)
 
 
 public:
 
-	Obj_MainParent(SDL_Renderer*, int, int);       //Constructor
+	Obj_MainParent(SDL_Renderer*, int, int);            //Constructor
 
-	void mainUpdate(EventHandler, GameTime);       //The main update, does important things
+	void mainUpdate(EventHandler, GameTime);            //The main update, does important things
 
-	virtual void update(EventHandler, GameTime);   //The update that children of the class can change
+	virtual void update(EventHandler, GameTime);        //The update that children of the class can change
 
-	void render(int, int);                         //Renders the object sprite
+	void render(int, int);                              //Renders the object sprite
+
+	void setSprite(std::string, int, int, int, float);  //Change the sprite
+
+	//Getters and Setters
+
+	void setActive(bool);
 
 };
 

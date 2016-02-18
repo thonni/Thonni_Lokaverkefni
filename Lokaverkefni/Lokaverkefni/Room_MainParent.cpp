@@ -18,13 +18,10 @@ void Room_MainParent::mainUpdate(EventHandler e, GameTime t)
 	{
 		objects[i]->mainUpdate(e, t);
 	}
-	//update(e, t);
+	update(e, t);
 }
 
-void Room_MainParent::update(EventHandler e, GameTime t)
-{
-	false;
-}
+void Room_MainParent::update(EventHandler e, GameTime t){}
 
 void Room_MainParent::mainRender()
 {

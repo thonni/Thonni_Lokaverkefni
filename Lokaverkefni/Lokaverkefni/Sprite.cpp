@@ -3,13 +3,16 @@
 using namespace std;
 
 Sprite::Sprite(SDL_Renderer* rendererIn, std::string file, 
-	int frameWidth, int frameHeight, int framesIn, float speedIn)
+	int frameWidthIn, int frameHeightIn, int framesIn, float speedIn)
 {
 	frames = framesIn;
 	frame = 0;
 	renderer = rendererIn;
 	speed = speedIn;
 	speedCounter = 0.0f;
+
+	frameWidth = frameWidthIn;
+	frameHeight = frameHeightIn;
 
 	baseTexture = NULL;
 
@@ -35,10 +38,10 @@ Sprite::Sprite(SDL_Renderer* rendererIn, std::string file,
 	{
 		for (int j = 0; j < baseTextureWidth / frameWidth; j++)
 		{
-			rects[counter].x = j*frameWidth;
-			rects[counter].y = i*frameHeight;
-			rects[counter].w = frameWidth;
-			rects[counter].h = frameHeight;
+			rects[counter].x = j*frameWidthIn;
+			rects[counter].y = i*frameHeightIn;
+			rects[counter].w = frameWidthIn;
+			rects[counter].h = frameHeightIn;
 			counter++;
 			if (counter >= frames)
 				break;
@@ -99,4 +102,14 @@ void Sprite::setSpeed(float newSpeed)
 float Sprite::getSpeed()
 {
 	return speed;
+}
+
+int Sprite::getWidth()
+{
+	return frameWidth;
+}
+
+int Sprite::getHeight()
+{
+	return frameHeight;
 }
