@@ -3,6 +3,7 @@
 #include "SDL.h"
 #include "SDL_image.h"
 #include "Objects.h"
+#include "IdHandler.h"
 
 /*
 //The main room parent that all other rooms inherit
@@ -20,6 +21,8 @@ protected:
 
 	SDL_Renderer* renderer;                //Holds the pointer to the renderer
 
+	IdHandler idHandler;                  //Holds the pointer to the idHandler
+
 	std::vector<Obj_MainParent*> objects;  //Vector (array) of all objects in this room
 
 public:
@@ -31,7 +34,7 @@ public:
 
 	void mainRender();                                    //Renders all objects in the room
 
-	void render();                                        //Optional render if needed (Can be change by children of this class)
+	void render();                                        //Optional render if needed (Can be changed by children of this class)
 };
 
 

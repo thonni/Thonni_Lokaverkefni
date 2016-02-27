@@ -16,7 +16,7 @@ void Room_MainParent::mainUpdate(EventHandler e, GameTime t)
 {
 	for (int i = 0; i < objects.size(); i++)
 	{
-		objects[i]->mainUpdate(e, t);
+		objects[i]->mainUpdate(e, t, objects);
 	}
 	update(e, t);
 }

@@ -6,6 +6,7 @@
 #include "EventHandler.h"
 #include "Sprite.h"
 #include "GameTime.h"
+#include "Collider.h"
 
 
 /*------------------------------------
@@ -15,7 +16,11 @@ class Obj_MainParent
 {
 protected:
 
+	int id;                         //The object's id
+	
 	SDL_Renderer* renderer;         //Holds the renderer pointer
+
+	Collider* collider;             //Holds the collider object
 
 	float x;                        //X Position
 
@@ -36,19 +41,35 @@ protected:
 
 public:
 
-	Obj_MainParent(SDL_Renderer*, int, int);            //Constructor
+	Obj_MainParent(int, SDL_Renderer*, int, int);       //Constructor
 
-	void mainUpdate(EventHandler, GameTime);            //The main update, does important things
+	void mainUpdate(EventHandler, GameTime, std::vector<Obj_MainParent*>);            //The main update, does important things
 
-	virtual void update(EventHandler, GameTime);        //The update that children of the class can change
+	virtual void update(EventHandler, GameTime, std::vector<Obj_MainParent*>);        //The update that children of the class can change
 
 	void render(int, int);                              //Renders the object sprite
 
 	void setSprite(std::string, int, int, int, float);  //Change the sprite
 
+	bool checkCollision(std::vector<Obj_MainParent*>, int, int);
+
 	//Getters and Setters
 
 	void setActive(bool);
+
+	Collider* getCollider();
+
+	int getX();
+
+	int getY();
+
+	int getWidth();
+
+	int getHeight();
+
+	int getId();
+
+	bool getSolid();
 
 };
 
@@ -58,9 +79,22 @@ public:
 class Obj_Player: public Obj_MainParent
 {
 public:
-	Obj_Player(SDL_Renderer*, int, int);           //Constructor
+	Obj_Player(int, SDL_Renderer*, int, int);                                    //Constructor
 
-	void update(EventHandler, GameTime);           //The update function, runs each frame
+	void update(EventHandler, GameTime, std::vector<Obj_MainParent*>);           //The update function, runs each frame
+
+	int speed;
+
+	bool wKey;
+	bool aKey;
+	bool sKey;
+	bool dKey;
+
+	float xMovement;
+	float yMovement;
+
+	bool canMoveX;
+	bool canMoveY;
 
 };
 
@@ -70,8 +104,8 @@ public:
 class Obj_Wall : public Obj_MainParent
 {
 public:
-	Obj_Wall(SDL_Renderer*, int, int);             //Constructor
+	Obj_Wall(int, SDL_Renderer*, int, int);             //Constructor
 
-	void update(EventHandler, GameTime);           //The update function, runs each frame
+	void update(EventHandler, GameTime, std::vector<Obj_MainParent*>);           //The update function, runs each frame
 
 };

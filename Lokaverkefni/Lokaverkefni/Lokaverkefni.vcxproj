@@ -123,7 +123,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Collider.cpp" />
     <ClCompile Include="EventHandler.cpp" />
+    <ClCompile Include="IdHandler.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Obj_MainParent.cpp" />
     <ClCompile Include="Obj_Player.cpp" />
@@ -134,7 +136,9 @@
     <ClCompile Include="GameTime.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Collider.h" />
     <ClInclude Include="EventHandler.h" />
+    <ClInclude Include="IdHandler.h" />
     <ClInclude Include="Objects.h" />
     <ClInclude Include="Rooms.h" />
     <ClInclude Include="Sprite.h" />
