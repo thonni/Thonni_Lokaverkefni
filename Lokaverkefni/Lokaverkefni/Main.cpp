@@ -9,6 +9,7 @@
 #include "GameTime.h"
 #include "windows.h"
 #include "Rooms.h"
+#include "SDL_mixer.h"
 
 //Create window width and height
 const int SCREEN_WIDTH = 1024;
@@ -53,11 +54,10 @@ int main(int argc, char* args[])
 		//Exit event or escape key
 		if (e.getEvent(SDL_QUIT))
 			run = false;
-			
-		
+
 		//Update the current room
 		rooms[0]->mainUpdate(e, t);
-		rooms[0]->update(e, t);
+		//rooms[0]->update(e, t);
 
 		//RENDERING
 		//Clear the Window
@@ -105,6 +105,11 @@ bool Initialize()
 	{
 		printf("We were not able to create the renderer! SDL Error %s\n", SDL_GetError());
 		return false;
+	}
+
+	if (Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048) < 0)
+	{
+		cout << "SDL Mixer Error!" << endl;
 	}
 
 	SDL_SetRenderDrawColor(renderer, 144, 195, 212, 255);

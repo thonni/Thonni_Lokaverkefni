@@ -1,0 +1,5 @@
+Það sem þarf að gera:
+
+-laga collisions
+
+-spá í sound effects
